@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	font-family: 'Raleway';
 	letter-spacing: 1px;
@@ -22,17 +23,20 @@ body {
 	padding-top: 15px;
 	background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 }
+
 .logo {
 	color: white;
 	font-weight: 400;
 	letter-spacing: 1px;
 }
+
 .logo span {
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
 	background-image: linear-gradient(180deg, #1b5fe2 0%, #082e76 100%);
 }
+
 .contact-button {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
@@ -63,6 +67,7 @@ body {
 	margin: 5px 0;
 	position: relative;
 }
+
 .burger-line::before,
 .burger-line::after {
 	content: '';
@@ -72,9 +77,11 @@ body {
 	display: block;
 	position: absolute;
 }
+
 .burger-line::before {
 	top: -5px;
 }
+
 .burger-line::after {
 	top: 5px;
 }
@@ -82,6 +89,7 @@ body {
 .burger-icon-container.cross > .burger-line {
 	height: 0;
 }
+
 .cross .burger-line::before {
 	height: 3px;
 	border-radius: 20%;
@@ -124,18 +132,21 @@ body {
 	top: 50%;
 	transform: translateY(-50%);
 }
+
 .social-icons {
 	display: flex;
 	flex-direction: column;
 }
+
 .social-icons a {
+	font-size: 26px;
 	color: white;
 	margin: 5px 0;
 }
 
 /* Sekcja powitalna */
 .welcome-section {
-	padding-left: 20px;
+	padding: 80px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
@@ -162,9 +173,11 @@ body {
 	font-size: 20px;
 	max-width: 600px;
 }
+
 .welcome-text-description span {
 	font-weight: bold;
 }
+
 .tiles {
 	display: grid;
 	height: 600px;
@@ -182,6 +195,7 @@ body {
 	overflow: hidden;
 	transition: transform 0.3s ease;
 }
+
 .tile::before {
 	content: '';
 	position: absolute;
@@ -191,15 +205,18 @@ body {
 	top: 0;
 	left: 0;
 }
+
 .tile img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
+
 .tile:hover {
 	transform: scale(1.1);
 	z-index: 9;
 }
+
 .tile-title {
 	position: absolute;
 	font-weight: bold;
@@ -208,39 +225,26 @@ body {
 	left: 20px;
 	bottom: 20px;
 }
-.skills-title {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+
+/* Umiejętności */
 
 .skills-section {
-	position: relative;
-	justify-items: center; /* Ustawienie kafelków w poziomie */
-	align-items: center; /* Ustawienie kafelków w pionie */
-	gap: 20px; /* Odstęp między kafelkami */
-	top: 100px;
-	height: 100vh;
+	padding: 80px;
 }
+
 .backround-text {
-	position: absolute;
 	color: transparent;
 	text-align: center;
 	font-weight: 700;
-	font-size: 180px;
-	left: 40px;
-	top: 0;
+	font-size: 120px;
 	-webkit-text-stroke: 1px rgba(255, 255, 255, 0.295);
 	z-index: -1;
 }
 
 .skills-header {
-	position: absolute;
+	margin-top: 40px;
 	font-weight: 700;
-	font-size: 100px;
-	top: 200px;
-	left: 40px;
+	font-size: 80px;
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -248,38 +252,217 @@ body {
 }
 
 .soft-skills {
-	position: relative;
-	top: 200px;
-	width: 600px;
-	height: 700px;
-	gap: 20px;
-	width: 50%;
+	height: 800px;
+	align-items: center;
+	min-width: 650px;
+	max-width: 650px;
 	margin: 0 auto;
+	position: relative;
 }
 
 .soft-skill {
-	position: absolute;
 	background: #242424;
 	color: #fff;
 	width: 100%;
-	top: 200px;
 	max-width: 300px;
 	height: 300px;
 	padding: 20px;
 	border: 1px solid #444444;
+	/* margin: 20px 0; */
+	position: absolute;
 }
+
 .soft-skill.first {
-	top: 550px;
-}
-.soft-skill.second {
-	top: 250px;
-	right: 0;
-}
-.soft-skill.third {
-	top: 200px;
 	left: 0;
 }
+
+.soft-skill.second {
+	top: 150px;
+	right: 0;
+}
+
+.soft-skill.third {
+	left: 0;
+	bottom: 150px;
+}
+
 .soft-skill.fourth {
 	right: 0;
-	top: 600px;
+	bottom: 0;
 }
+
+.soft-skill-title {
+	font-size: 20px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.soft-skill-description {
+	padding: 15px;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.hard-skills {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.skill-tile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 80px;
+	width: 100px;
+	padding: 10px;
+	background-color: #242424;
+	color: #fff;
+	border: 1px solid #444444;
+	border-radius: 5px;
+	/* position: absolute; */
+}
+
+.skill-tile i {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.skill-tile span {
+	font-size: 14px;
+}
+
+.dots-container {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	border: 1px solid #000; /* Styl ramki kropki */
+	border-radius: 50%; /* Zaokrąglenie kropki */
+	cursor: pointer;
+}
+
+.carousel-section{
+	padding: 80px;
+}
+.carousel-inner {
+	padding: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* overflow: hidden; */
+}
+
+.carousel-item {
+	flex: 0 0 calc(25% - 10px); /* Ustawienie szerokości na 25%, z odjęciem marginesu (10px) */
+	margin-right: 10px;
+	padding: 5px; /* Dodanie paddingu */
+}
+
+.carousel-item img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Styl kropki aktywnej */
+.dot.active {
+	background-color: #ce0000; /* Kolor tła aktywnej kropki */
+	border: none; /* Usunięcie ramki */
+	width: 12px; /* Zwiększenie rozmiaru aktywnej kropki */
+	height: 12px;
+	/* Dodaj podświetlenie */
+	box-shadow: 0 0 5px #ce0000;
+}
+.carousel-navigation {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 10px;
+  }
+  
+  .nav-prev,
+  .nav-next {
+	background-color: #242424;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  .carousel-dots {
+	display: flex;
+	gap: 5px;
+  }
+  
+  .dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	cursor: pointer;
+  }
+  
+  .carousel-navigation .nav-prev {
+	order: 1;
+  }
+  
+  .carousel-navigation .nav-next {
+	order: 3;
+  }
+  
+
+
+  .contact-section {
+	padding: 80px;
+	background: #242424;
+	color: #fff;
+	text-align: center;
+  }
+  
+  #contact-form {
+	max-width: 600px;
+	margin: 0 auto;
+  }
+  
+  label {
+	display: block;
+	margin-top: 15px;
+  }
+  
+  input,
+  textarea {
+	width: 100%;
+	padding: 10px;
+	margin-top: 8px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+  }
+  
+  /* button {
+	background-color: #1853c8;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  button:hover {
+	background-color: #092e75;
+  } */
