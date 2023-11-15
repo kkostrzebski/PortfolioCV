@@ -45,3 +45,23 @@ const handleCurrentYear = () => {
 handleCurrentYear()
 
 navBtn.addEventListener('click', handleNav)
+
+
+
+
+
+
+
+const projectButtons = document.querySelectorAll('.projects-card-info-btn');
+
+const handleProjectClick = (projectId) => {
+    // Przeniesienie do innego projektu przez zmianę adresu URL
+    window.location.href = `./api-apps/src/App.js`;
+};
+
+projectButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const projectId = button.getAttribute('data-project');
+        handleProjectClick(projectId);
+    });
+});

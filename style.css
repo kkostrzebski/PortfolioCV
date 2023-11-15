@@ -423,8 +423,110 @@ body {
 }
 @media (min-width: 1100px) {
 }
-
-
+.projects-cards {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.projects-card {
+	position: relative;
+	margin: 1em 0;
+	height: 450px;
+	width: 400px;
+	color: #fff;
+	text-align: center;
+	perspective: 1000px;
+  }
+  .projects-card:hover .projects-card-img {
+	transform: rotateY(-180deg);
+	opacity: 0;
+  }
+  .projects-card:hover .projects-card-info {
+	transform: rotateY(0);
+	opacity: 1;
+  }
+  .projects-card-img {
+	padding: 2em;
+	height: 100%;
+	border-radius: 8px;
+	background-size: cover;
+	transition: transform 1s, opacity 1s;
+  }
+  .projects-card-img--first {
+	background-image: linear-gradient(45deg, rgba(8, 206, 255, 0.75), rgba(8, 24, 255, 0.75)), url("../img/islands/water-small.jpg");
+  }
+  .projects-card-img--second {
+	background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/islands/hawaii-small.jpg");
+  }
+  .projects-card-img--third {
+	background-image: linear-gradient(45deg, rgba(190, 10, 214, 0.75), rgba(68, 0, 255, 0.75)), url("../img/islands/boat-small.jpg");
+  }
+  .projects-card-img-title {
+	font-family: "Dancing Script", cursive;
+	font-size: 2.8rem;
+  }
+  .projects-card-img-info {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	font-size: 1.8rem;
+  }
+  .projects-card-img-info i {
+	margin-right: 0.3em;
+  }
+  .projects-card-info {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-image: radial-gradient(circle at top right, rgb(0, 78, 255) 0%, rgb(0, 212, 255) 100%);
+	border-radius: 8px;
+	opacity: 0;
+	transform: rotateY(180deg);
+	transition: transform 1s, opacity 1s;
+  }
+  .projects-card-info-title {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: "Dancing Script", cursive;
+	font-size: 2.8rem;
+	top: 1.2em;
+  }
+  .projects-card-info-list {
+	margin: 0 auto;
+	width: 70%;
+	list-style: none;
+  }
+  .projects-card-info-list-item {
+	padding: 1em;
+	font-size: 1.4rem;
+	border-bottom: 1px solid #eee;
+  }
+  .projects-card-info-list-item:last-child {
+	border-bottom: none;
+  }
+  .projects-card-info-btn {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 2em;
+	padding: 1em;
+	border-radius: 8px;
+	width: 80%;
+	border: none;
+	background-color: #00ffaa;
+	cursor: pointer;
+  }
+  .projects-card-info-btn::before {
+	background-color: #0fe29c;
+  }
+  
 .footer__bottom-text {
 	color: #fff;
 	padding: 2em;
