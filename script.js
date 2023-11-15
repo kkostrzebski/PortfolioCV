@@ -3,6 +3,7 @@ const navBtn = document.querySelector('.burger-btn')
 const allNavItems = document.querySelectorAll('.nav-item')
 const navLine = document.querySelector('.burger-line')
 const logo = document.querySelector('.logo')
+const footerYear = document.querySelector('.footer__year')
 
 const scrollToTop = () => {
 	window.scrollTo({
@@ -36,5 +37,11 @@ const handleNavItemsAnimation = () => {
 		delayTime++
 	})
 }
+
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
+}
+handleCurrentYear()
 
 navBtn.addEventListener('click', handleNav)
